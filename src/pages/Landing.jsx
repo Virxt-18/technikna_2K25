@@ -119,9 +119,12 @@ const Landing = ({ animate }) => {
       </div> */}
 
       {/* Soft red background glow */}
-      <div className="absolute w-110 h-110 rounded-full bg-[rgb(255,0,30)] top-1/2 left-1/2 
+      <div className="absolute rounded-full bg-[rgb(255,0,30)] top-1/2 left-1/2 
                 -translate-x-1/2 -translate-y-1/2
-                      shadow-[0_0_15.42px_rgb(255,0,30),0_0_80.84px_rgb(255,0,30),0_0_387.93px_rgba(255,0,30,0.7)]">
+                      shadow-[0_0_15.42px_rgb(255,0,30),0_0_80.84px_rgb(255,0,30),0_0_387.93px_rgba(255,0,30,0.7)]"
+                      style={{width:"clamp(250px, 40vw, 500px)",
+                              height:"clamp(250px, 40vw, 500px)"
+                      }}>
       </div>
 
       {/* Background Image */}

@@ -197,7 +197,7 @@ function Nav() {
       style={{ backgroundColor: "rgba(0, 0, 0, 0.15)" }}
     >
       {/* Centered Links */}
-      <div className="flex gap-25 text-white/80 text-lg ks-font select-none font-bold">
+      <div className="flex gap-25 max-xl:gap-15 max-lg:gap-10 text-white/80 text-[clamp(0.9rem,1.9vw,1.2rem)] ks-font select-none font-bold">
         <NavLink to="/" label="Home" jp="ホーム" onClick={handleNavClick} />
         <NavLink to="/events" label="Events" jp="イベント" onClick={handleNavClick} />
         <NavLink to="/merchandise" label="Merchandise" jp="グッズ" onClick={handleNavClick} />
