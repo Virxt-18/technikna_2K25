@@ -51,6 +51,7 @@
 html, body {
   background-color: #141414;
   min-height: 100%;
+<<<<<<< HEAD
 }
 
 
@@ -62,4 +63,6 @@ html, body {
 /* stop shrinking of samurai from base style*/
 .no-max-width {
   max-width: none !important;
+=======
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
 }

@@ -158,7 +158,10 @@ function Nav() {
           height: "100vh",
           zIndex: isMenuOpen ? 9998 : 50,
           pointerEvents: isMenuOpen ? "auto" : "none",
+<<<<<<< HEAD
           backgroundColor: "transparent",
+=======
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
         }}
       >
         <StaggeredMenu
@@ -193,11 +196,19 @@ function Nav() {
       ref={navRef}
       className="fixed top-0 left-0 right-0 w-full
             font-bold text-3xl flex justify-center 
+<<<<<<< HEAD
             items-center px-8 pt-4 pb-1 z-50 backdrop-blur-md"
       style={{ backgroundColor: "rgba(0, 0, 0, 0.15)" }}
     >
       {/* Centered Links */}
       <div className="flex gap-25 max-xl:gap-15 max-lg:gap-10 text-white/80 text-[clamp(0.9rem,1.9vw,1.2rem)] ks-font select-none font-bold">
+=======
+            items-center px-8 pt-4 pb-1 z-50"
+      style={{ backgroundColor: "rgba(0, 0, 0, 0.15)" }}
+    >
+      {/* Centered Links */}
+      <div className="flex gap-25 text-white/80 text-lg ks-font select-none font-bold">
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
         <NavLink to="/" label="Home" jp="ホーム" onClick={handleNavClick} />
         <NavLink to="/events" label="Events" jp="イベント" onClick={handleNavClick} />
         <NavLink to="/merchandise" label="Merchandise" jp="グッズ" onClick={handleNavClick} />

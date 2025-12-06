@@ -298,7 +298,11 @@ const Alumni = () => {
                                 </p>
                                 <button
                                     onClick={handleLoginRedirect}
+<<<<<<< HEAD
                                     className="flex items-center bg-black/70 border border-white/25 text-gray-100 px-6 py-3 rounded-lg shadow-md hover:bg-black/80 transition-all font-medium hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] active:scale-90 cursor-pointer"
+=======
+                                    className="flex items-center bg-black/70 border border-white/25 text-gray-100 px-6 py-3 rounded-lg shadow-md hover:bg-black/80 transition-all font-medium"
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
                                 >
                                     <LogIn className="w-6 h-6 mr-3" />
                                     Sign In / Register

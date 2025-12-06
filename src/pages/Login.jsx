@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
+=======
+import React, { useState } from "react";
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
 import { useNavigate } from "react-router-dom";
 import { auth, db } from "../firebase";
 import {
@@ -7,10 +11,15 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+<<<<<<< HEAD
 import { s } from "framer-motion/client";
 
 export default function Login() {
   const [isMobile, setIsMobile] = useState(false);
+=======
+
+export default function Login() {
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
   const navigate = useNavigate();
   const [signIn, setSignIn] = useState(true);
   const [email, setEmail] = useState("");
@@ -22,6 +31,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
+<<<<<<< HEAD
   // Check screen size on mount and resize
   useEffect(() => {
     const checkMobile = () => {
@@ -36,6 +46,8 @@ export default function Login() {
     };
   }, []);
 
+=======
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
   const handleSubmit = async () => {
     setLoading(true);
     setError("");
@@ -104,6 +116,7 @@ export default function Login() {
     }
   };
 
+<<<<<<< HEAD
   if (isMobile) {
     return (
 <div className="md:hidden mt-[120px]  h-[70vh] max-w-sm mx-auto bg-[#141414] border border-red-500/40 rounded-2xl p-6 backdrop-blur-xl text-gray-100"
@@ -253,6 +266,11 @@ style={{ width: "clamp(200px, 90vw, 700px)",
     <div className="min-h-screen w-full flex items-center justify-center bg-[#050509] bg-[url('/images/login-samurai-bg.jpg')] bg-cover bg-center bg-fixed px-4 py-10 pt-[100px]">
       {/* changed font to website font*/}
       <div className="relative ks-font w-full max-w-4xl md:max-w-5xl min-h-[420px] sm:min-h-[460px] bg-black/80 border border-red-500/40 rounded-2xl shadow-[0_24px_60px_rgba(0,0,0,0.9)] overflow-hidden font-[Montserrat] text-gray-100 backdrop-blur-xl">
+=======
+  return (
+    <div className="min-h-screen w-full flex items-center justify-center bg-[#050509] bg-[url('/images/login-samurai-bg.jpg')] bg-cover bg-center bg-fixed px-4 py-10 pt-[100px]">
+      <div className="relative w-full max-w-4xl md:max-w-5xl min-h-[420px] sm:min-h-[460px] bg-black/80 border border-red-500/40 rounded-2xl shadow-[0_24px_60px_rgba(0,0,0,0.9)] overflow-hidden font-[Montserrat] text-gray-100 backdrop-blur-xl">
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
         {/* ================= SIGN UP PANEL ================= */}
         <div
           className={`absolute top-0 left-0 h-full w-1/2 transition-all duration-500 ease-in-out
@@ -275,21 +293,33 @@ style={{ width: "clamp(200px, 90vw, 700px)",
             <input
               type="text"
               placeholder="Name"
+<<<<<<< HEAD
               className="bg-slate-900/70 border border-white/10 text-gray-100 placeholder-gray-400 font-bold rounded-md py-2.5 sm:py-3 px-3 sm:px-4 my-2 w-full focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base"
+=======
+              className="bg-slate-900/70 border border-white/10 text-gray-100 placeholder-gray-400 rounded-md py-2.5 sm:py-3 px-3 sm:px-4 my-2 w-full focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base"
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
             <input
               type="text"
               placeholder="College"
+<<<<<<< HEAD
               className="bg-slate-900/70 border border-white/10 text-gray-100 placeholder-gray-400 font-bold rounded-md py-2.5 sm:py-3 px-3 sm:px-4 my-2 w-full focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base"
+=======
+              className="bg-slate-900/70 border border-white/10 text-gray-100 placeholder-gray-400 rounded-md py-2.5 sm:py-3 px-3 sm:px-4 my-2 w-full focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base"
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
               value={college}
               onChange={(e) => setCollege(e.target.value)}
             />
             <input
               type="email"
               placeholder="Email"
+<<<<<<< HEAD
               className="bg-slate-900/70 border border-white/10 text-gray-100 placeholder-gray-400 font-bold rounded-md py-2.5 sm:py-3 px-3 sm:px-4 my-2 w-full focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base"
+=======
+              className="bg-slate-900/70 border border-white/10 text-gray-100 placeholder-gray-400 rounded-md py-2.5 sm:py-3 px-3 sm:px-4 my-2 w-full focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base"
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -299,12 +329,20 @@ style={{ width: "clamp(200px, 90vw, 700px)",
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+<<<<<<< HEAD
                 className="bg-slate-900/70 border border-white/10 text-gray-100 placeholder-gray-400 font-bold rounded-md py-2.5 sm:py-3 px-3 sm:px-4 my-2 w-full focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base"
+=======
+                className="bg-slate-900/70 border border-white/10 text-gray-100 placeholder-gray-400 rounded-md py-2.5 sm:py-3 px-3 sm:px-4 my-2 w-full focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base"
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
               />
               <button
                 type="button"
                 onClick={() => setShowPassword((prev) => !prev)}
+<<<<<<< HEAD
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-[11px] font-bold sm:text-xs text-gray-400"
+=======
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[11px] sm:text-xs text-gray-300"
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
               >
                 {showPassword ? "Hide" : "Show"}
               </button>
@@ -313,12 +351,20 @@ style={{ width: "clamp(200px, 90vw, 700px)",
             <button
               type="submit"
               disabled={loading}
+<<<<<<< HEAD
               className="mt-2 rounded-full border border-red-500/70 text-white bg-red-600/90 text-xs sm:text-sm font-bold py-2.5 sm:py-3 px-10 sm:px-12 uppercase tracking-wider active:scale-95 focus:outline-none hover:bg-red-500 transition-colors disabled:opacity-60 cursor-pointer"
+=======
+              className="mt-2 rounded-full border border-red-500/70 text-white bg-red-600/90 text-xs sm:text-sm font-bold py-2.5 sm:py-3 px-10 sm:px-12 uppercase tracking-wider active:scale-95 focus:outline-none hover:bg-red-500 transition-colors disabled:opacity-60"
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
             >
               {loading ? "Please wait..." : "Sign Up"}
             </button>
             {error && !signIn && (
+<<<<<<< HEAD
               <p className="text-red-300 text-[11px] font-bold sm:text-xs bg-red-900/60 border border-red-500/40 px-3 py-2 rounded w-full my-2 text-left">
+=======
+              <p className="text-red-300 text-[11px] sm:text-xs bg-red-900/60 border border-red-500/40 px-3 py-2 rounded w-full my-2 text-left">
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
                 {error}
               </p>
             )}
@@ -352,7 +398,11 @@ style={{ width: "clamp(200px, 90vw, 700px)",
             <input
               type="email"
               placeholder="Email"
+<<<<<<< HEAD
               className="bg-slate-900/70 border border-white/10 text-gray-100 placeholder-gray-400 font-bold rounded-md py-2.5 sm:py-3 px-3 sm:px-4 my-2 w-full focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base"
+=======
+              className="bg-slate-900/70 border border-white/10 text-gray-100 placeholder-gray-400 rounded-md py-2.5 sm:py-3 px-3 sm:px-4 my-2 w-full focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base"
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -362,18 +412,30 @@ style={{ width: "clamp(200px, 90vw, 700px)",
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+<<<<<<< HEAD
                 className="bg-slate-900/70 border border-white/10 text-gray-100 placeholder-gray-400 font-bold rounded-md py-2.5 sm:py-3 px-3 sm:px-4 my-2 w-full focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base"
+=======
+                className="bg-slate-900/70 border border-white/10 text-gray-100 placeholder-gray-400 rounded-md py-2.5 sm:py-3 px-3 sm:px-4 my-2 w-full focus:outline-none focus:ring-2 focus:ring-red-500 text-sm sm:text-base"
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
               />
               <button
                 type="button"
                 onClick={() => setShowPassword((prev) => !prev)}
+<<<<<<< HEAD
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-[11px] font-bold sm:text-xs text-gray-400"
+=======
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[11px] sm:text-xs text-gray-300"
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
               >
                 {showPassword ? "Hide" : "Show"}
               </button>
             </div>
             <button
+<<<<<<< HEAD
               className="text-[11px] sm:text-xs text-gray-300 font-semibold hover:text-red-300 my-2"
+=======
+              className="text-[11px] sm:text-xs text-gray-300 hover:text-red-300 my-2"
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
               onClick={handleForgotPassword}
             >
               Forgot your password?
@@ -381,12 +443,20 @@ style={{ width: "clamp(200px, 90vw, 700px)",
             <button
               type="submit"
               disabled={loading}
+<<<<<<< HEAD
               className="rounded-full border border-red-500/70 text-white bg-red-600/90 text-xs sm:text-sm font-bold py-2.5 sm:py-3 px-10 sm:px-12 uppercase tracking-wider active:scale-95 focus:outline-none hover:bg-red-500 transition-colors disabled:opacity-60 cursor-pointer"
+=======
+              className="rounded-full border border-red-500/70 text-white bg-red-600/90 text-xs sm:text-sm font-bold py-2.5 sm:py-3 px-10 sm:px-12 uppercase tracking-wider active:scale-95 focus:outline-none hover:bg-red-500 transition-colors disabled:opacity-60"
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
             >
               {loading ? "Please wait..." : "Sign In"}
             </button>
             {error && signIn && (
+<<<<<<< HEAD
               <p className="text-red-300 text-[11px] font-bold sm:text-xs bg-red-900/60 border border-red-500/40 px-3 py-2 rounded w-full my-2 text-left">
+=======
+              <p className="text-red-300 text-[11px] sm:text-xs bg-red-900/60 border border-red-500/40 px-3 py-2 rounded w-full my-2 text-left">
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
                 {error}
               </p>
             )}
@@ -418,13 +488,22 @@ style={{ width: "clamp(200px, 90vw, 700px)",
               <h1 className="font-bold text-2xl sm:text-3xl">
                 Welcome Back!
               </h1>
+<<<<<<< HEAD
               <p className="text-xs sm:text-sm font-bold leading-5 tracking-wide my-4 sm:my-6  text-red-100 max-w-xs">
+=======
+              <p className="text-xs sm:text-sm font-light leading-5 tracking-wide my-4 sm:my-6 text-red-100 max-w-xs">
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
                 To keep connected with us please login with your personal info.
               </p>
               <button
                 type="button"
+<<<<<<< HEAD
                 className="rounded-full border border-white/80 bg-transparent text-white text-xs sm:text-sm font-bold py-2.5 sm:py-3 px-10 sm:px-12 uppercase tracking-wider active:scale-95 focus:outline-none hover:bg-white/10 cursor-pointer"
                 onClick={() => {setSignIn(true); setError(""); setSuccess("");}}
+=======
+                className="rounded-full border border-white/80 bg-transparent text-white text-xs sm:text-sm font-bold py-2.5 sm:py-3 px-10 sm:px-12 uppercase tracking-wider active:scale-95 focus:outline-none hover:bg-white/10"
+                onClick={() => setSignIn(true)}
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
               >
                 Sign In
               </button>
@@ -439,13 +518,22 @@ style={{ width: "clamp(200px, 90vw, 700px)",
               <h1 className="font-bold text-2xl sm:text-3xl">
                 HELP SAMURAI!!
               </h1>
+<<<<<<< HEAD
               <p className="text-xs sm:text-sm font-bold leading-5 tracking-wide my-4 sm:my-6 text-red-100 max-w-xs">
+=======
+              <p className="text-xs sm:text-sm font-light leading-5 tracking-wide my-4 sm:my-6 text-red-100 max-w-xs">
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
                 Enter your personal details and start journey with us.
               </p>
               <button
                 type="button"
+<<<<<<< HEAD
                 className="rounded-full border border-white/80 bg-transparent text-white text-xs sm:text-sm font-bold py-2.5 sm:py-3 px-10 sm:px-12 uppercase tracking-wider active:scale-95 focus:outline-none hover:bg-white/10 cursor-pointer"
                 onClick={() => {setSignIn(false); setError(""); setSuccess("");}}
+=======
+                className="rounded-full border border-white/80 bg-transparent text-white text-xs sm:text-sm font-bold py-2.5 sm:py-3 px-10 sm:px-12 uppercase tracking-wider active:scale-95 focus:outline-none hover:bg-white/10"
+                onClick={() => setSignIn(false)}
+>>>>>>> 0578cf6fadbc7ca52124b942a17b4053d2817870
               >
                 Sign Up
               </button>
